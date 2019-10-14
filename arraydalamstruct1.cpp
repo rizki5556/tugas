@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <conio.h>
 #include <string.h>
-//#define maks 3		: membuat penginputan maksimal 3
+//#define maks 3		: membuat penginputan menjadi maksimal 3
 using namespace std;
  
 struct TMhs
