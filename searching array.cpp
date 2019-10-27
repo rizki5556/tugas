@@ -85,11 +85,11 @@ int main()
 	arr.sisip(36);
 	arr.tampil();
 	
-	int kunciPencarian=177;
+	int kunciPencarian=117;
 	if(arr.cari(kunciPencarian)!=arr.bacaUkuran())
 		cout<<"menemukan "<<kunciPencarian<<endl;
 	else
-		cout<<"tidak ditemukan"<<kunciPencarian<<endl;
+		cout<<"tidak ditemukan "<<kunciPencarian<<endl;
 		getch();
 		return 0;
 }
