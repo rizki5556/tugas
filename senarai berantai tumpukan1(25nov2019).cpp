@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+using namespace std;
 
 typedef struct linkedList{
     char info;
@@ -27,80 +28,10 @@ void baca_maju();
 void pembukaan();
 void intro();
 
-void main()
-{
-  pembukaan();
-  awal:
-    intro();
-    clrscr();
-    cout << "      ====================================      \n";
-    cout << "                Senarai Berantai                \n";
-    cout << "      ====================================      \n";
-    cout << "------------------------------------------------\n";
-    cout << "1. Tambah Depan\n";
-    cout << "2. Tambah Belakang\n";
-    cout << "3. Tambah Tengah\n";
-    cout << "4. Tampil Data\n";
-    cout << "5. Hapus Simpul\n";
-    cout << "6. Keluar\n";
-    cout << "------------------------------------------------\n";
-    cout << "Pilih : ";
-    gets(conv);
-    if(!intValidation(conv)){ cout<<"Input tidak boleh berupa karakter.."; getch(); goto awal; }
-    pilih=atoi(conv);    if(pilih < 1 || pilih > 6){ goto awal; }
-
-    switch (pilih)
-    {
-        case 1:
-            input_data();
-            tambah_depan(data);
-            baca_maju();
-            getch();
-            goto awal;
-            break;
-        case 2:
-            input_data();
-            tambah_belakang(data);
-            baca_maju();
-            getch();
-            goto awal;
-            break;
-        case 3:
-            input_data();
-            tambah_tengah(data);
-            baca_maju();
-            getch();
-            goto awal;
-            break;
-        case 4:
-            baca_maju();
-            getch();
-            goto awal;
-            break;
-        case 5:
-            baca_maju();
-            input_data();
-            hapus_simpul(data);
-            getch();
-            goto awal;
-            break;
-        case 6:
-            cout << "Terimakasih Telah Mencoba Program Senarai Ini...^.^";
-            exit(1);
-            break;
-        default:
-            cout << "Id Menu Tidak Ada Pada List";
-            getch();
-            goto awal;
-            break;
-    }
-}
-
 char input_data()
 {
     cout << "\n";
-    cout << "Inputkan Data (Char) : ";
-    cin >> data;
+    cout << "Inputkan Data (Char) : ";cin >> data;
     return data;
 }
 
@@ -236,78 +167,78 @@ int intValidation(char chrInp[])
            return 1;
 }
 
-void pembukaan()
-{
-  cout<<"====================================================\n";
-  cout<<"====================================================\n";
-  cout<<"                                                    \n";
-  cout<<"                   Loading ........                 \n";
-  cout<<"                                                    \n";
-  cout<<"   ===============================================  \n";
-  cout<<"   |                                             |  \n";
-  cout<<"   |    Program Senarai Berantai (Linked List)   |  \n";
-  cout<<"   |                                             |  \n";
-  cout<<"   ===============================================  \n";
-  cout<<"                                                    \n";
-  cout<<"                                                    \n";
-  cout<<"                                                    \n";
-  cout<<"                                                    \n";
-  cout<<"                                                    \n";
-  cout<<"                                                    \n";
-  cout<<"                                                    \n";
-  cout<<"                                                    \n";
-  cout<<"                                                    \n";
-  cout<<"                                                    \n";
-  cout<<"====================================================\n";
-  cout<<"====================================================";
-  int x = 17, y=6,c,d,a,e;
-  for(a=1;a<3;a++)
-  {
-  for (x;x<64;x++)
-  {
-     gotoxy(x,y);
-     cout<<"   ";
-     for(c=1;c<1000;c++)
-       for(d=1;d<1000;d++)
-          cout<<"";
-     gotoxy(x,y);
-     cout<<"=";
-  }
-  x = 63, y=7;
-  for (y;y<11;y++)
-  {
-     gotoxy(x,y);
-     cout<<" ";
-     for(c=1;c<1000;c++)
-       for(d=1;d<1000;d++)
-         cout<<"";
-     gotoxy(x,y);
-     cout<<"|";
-  }
-  x = 63, y=10;
-  for (x;x>16;x--)
-  {
-     gotoxy(x-2,y);
-     cout<<"   ";
-     for(c=1;c<1000;c++)
-       for(d=1;d<1000;d++)
-         cout<<"";
-     gotoxy(x,y);
-     cout<<"=";
-  }
-  x = 17, y=9;
-  for (y;y>6;y--)
-  {
-     gotoxy(x,y);
-     cout<<" ";
-     for(c=1;c<1000;c++)
-        for(d=1;d<1000;d++)
-           cout<<"";
-     gotoxy(x,y);
-     cout<<"|";
-  }
-  }
-}
+//void pembukaan()
+//{
+//  cout<<"====================================================\n";
+ // cout<<"====================================================\n";
+//  cout<<"                                                    \n";
+ // cout<<"                   Loading ........                 \n";
+ // cout<<"                                                    \n";
+//  cout<<"   ===============================================  \n";
+//  cout<<"   |                                             |  \n";
+//  cout<<"   |    Program Senarai Berantai (Linked List)   |  \n";
+ // cout<<"   |                                             |  \n";
+ // cout<<"   ===============================================  \n";
+//  cout<<"                                                    \n";
+//  cout<<"                                                    \n";
+//  cout<<"                                                    \n";
+ // cout<<"                                                    \n";
+ // cout<<"                                                    \n";
+//  cout<<"                                                    \n";
+//  cout<<"                                                    \n";
+//  cout<<"                                                    \n";
+// cout<<"                                                    \n";
+ // cout<<"                                                    \n";
+//  cout<<"====================================================\n";
+ // cout<<"====================================================";
+ // int x = 17, y=6,c,d,a,e;
+//  for(a=1;a<3;a++)
+//  {
+ // for (x;x<64;x++)
+//  {
+//     goto xy(x,y);
+//     cout<<"   ";
+//     for(c=1;c<1000;c++)
+//       for(d=1;d<1000;d++)
+//          cout<<"";
+ //    goto xy(x,y);
+ //    cout<<"=";
+ // }
+ // x = 63, y=7;
+//  for (y;y<11;y++)
+ // {
+//     gotoxy(x,y);
+ //    cout<<" ";
+ //    for(c=1;c<1000;c++)
+ //      for(d=1;d<1000;d++)
+  //       cout<<"";
+ //    goto xy(x,y);
+ //    cout<<"|";
+//  }
+ // x = 63, y=10;
+ // for (x;x>16;x--)
+//  {
+//     goto xy(x-2,y);
+ //    cout<<"   ";
+ //    for(c=1;c<1000;c++)
+  //     for(d=1;d<1000;d++)
+  //       cout<<"";
+  //   goto xy(x,y);
+ //    cout<<"=";
+ // }
+ // x = 17, y=9;
+ // for (y;y>6;y--)
+ // {
+  //   goto xy(x,y);
+ //    cout<<" ";
+  //   for(c=1;c<1000;c++)
+  //      for(d=1;d<1000;d++)
+  //         cout<<"";
+  //   goto xy(x,y);
+  //   cout<<"|";
+ // }
+//  }
+//}
 
 void intro()
 {
@@ -316,7 +247,7 @@ void intro()
   {
    for(y=1;y<=25;y++)
    {
-    gotoxy(x,y);
+ //   gotoxy(x,y);
     cout<<"===";
     for(int a=1;a<80;a++)
       for(int b=1;b<80;b++)
@@ -329,4 +260,73 @@ void intro()
   for(int a=1;a<1800;a++)
       for(int b=1;b<1800;b++)
         cout<<"";
+}
+
+int main()
+{
+ // pembukaan();
+  awal:
+    intro();
+ //   clrscr();
+    cout << "      ====================================      \n";
+    cout << "                Senarai Berantai                \n";
+    cout << "      ====================================      \n";
+    cout << "------------------------------------------------\n";
+    cout << "1. Tambah Depan\n";
+    cout << "2. Tambah Belakang\n";
+    cout << "3. Tambah Tengah\n";
+    cout << "4. Tampil Data\n";
+    cout << "5. Hapus Simpul\n";
+    cout << "6. Keluar\n";
+    cout << "------------------------------------------------\n";
+    cout << "Pilih : ";
+    gets(conv);
+    if(!intValidation(conv)){ cout<<"Input tidak boleh berupa karakter.."; getch(); goto awal; }
+    pilih=atoi(conv);    if(pilih < 1 || pilih > 6){ goto awal; }
+
+    switch (pilih)
+    {
+        case 1:
+            input_data();
+            tambah_depan(data);
+            baca_maju();
+            getch();
+            goto awal;
+            break;
+        case 2:
+            input_data();
+            tambah_belakang(data);
+            baca_maju();
+            getch();
+            goto awal;
+            break;
+        case 3:
+            input_data();
+            tambah_tengah(data);
+            baca_maju();
+            getch();
+            goto awal;
+            break;
+        case 4:
+            baca_maju();
+            getch();
+            goto awal;
+            break;
+        case 5:
+            baca_maju();
+            input_data();
+            hapus_simpul(data);
+            getch();
+            goto awal;
+            break;
+        case 6:
+            cout << "Terimakasih Telah Mencoba Program Senarai Ini...^.^";
+            exit(1);
+            break;
+        default:
+            cout << "Id Menu Tidak Ada Pada List";
+            getch();
+            goto awal;
+            break;
+    }
 }
